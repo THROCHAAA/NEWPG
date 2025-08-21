@@ -143,16 +143,16 @@ const PurchaseNotification: React.FC<{ notification: any; onClose: () => void }>
   }, [onClose]);
 
   return (
-    <div className="fixed bottom-5 left-5 z-50 max-w-80 min-w-72 bg-white text-gray-900 rounded-xl shadow-2xl border border-red-200 border-l-4 border-l-red-600 transform transition-all duration-500 animate-slide-in">
+    <div className="fixed bottom-5 left-5 z-50 max-w-80 min-w-72 bg-black text-white rounded-xl shadow-2xl border border-red-600 border-l-4 border-l-red-600 transform transition-all duration-500 animate-slide-in">
       <div className="p-4">
         <div className="flex items-center mb-2">
-          <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
+          <div className="w-2 h-2 bg-red-500 rounded-full mr-2 animate-pulse"></div>
           <span className="font-semibold text-sm text-red-600">🔥 Compra realizada!</span>
         </div>
-        <div className="text-sm text-gray-700">
+        <div className="text-sm text-red-200">
           <strong>{notification.name}</strong> de <strong>{notification.city}</strong>
           <br />
-          <small className="text-gray-500">Plano {notification.plan} • há {notification.time}</small>
+          <small className="text-red-400">Plano {notification.plan} • há {notification.time}</small>
         </div>
       </div>
     </div>
@@ -164,15 +164,15 @@ const TestimonialCard: React.FC<{ testimonial: any }> = ({ testimonial }) => {
   const stars = Array(testimonial.rating).fill('⭐').join('');
 
   return (
-    <div className="bg-gray-900 p-6 md:p-8 rounded-lg text-center transition-all duration-300 hover:transform hover:scale-105">
+    <div className="bg-gray-900 border border-red-600/20 p-6 md:p-8 rounded-lg text-center transition-all duration-300 hover:transform hover:scale-105 hover:border-red-600/50">
       <div className="flex justify-center items-center mb-4">
         <div className="text-4xl mr-3">{testimonial.avatar}</div>
         <div className="text-2xl">{stars}</div>
       </div>
-      <p className="text-lg md:text-xl text-gray-300 mb-6 italic leading-relaxed">"{testimonial.text}"</p>
-      <div className="border-t border-gray-700 pt-6">
+      <p className="text-lg md:text-xl text-red-200 mb-6 italic leading-relaxed">"{testimonial.text}"</p>
+      <div className="border-t border-red-600/30 pt-6">
         <h4 className="font-bold text-lg text-white">{testimonial.name}</h4>
-        <p className="text-gray-400 text-sm">{testimonial.city}</p>
+        <p className="text-red-400 text-sm">{testimonial.city}</p>
       </div>
     </div>
   );
@@ -183,9 +183,9 @@ const FAQItem: React.FC<{ question: string; answer: string; index: number }> = (
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <div className="bg-gray-800 rounded-lg overflow-hidden">
+    <div className="bg-gray-900 border border-red-600/20 rounded-lg overflow-hidden">
       <button 
-        className="w-full text-left p-6 focus:outline-none hover:bg-gray-700 transition-colors"
+        className="w-full text-left p-6 focus:outline-none hover:bg-red-950/20 transition-colors"
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex justify-between items-center">
@@ -197,7 +197,7 @@ const FAQItem: React.FC<{ question: string; answer: string; index: number }> = (
       </button>
       {isOpen && (
         <div className="px-6 pb-6">
-          <p className="text-gray-300">{answer}</p>
+          <p className="text-red-200">{answer}</p>
         </div>
       )}
     </div>
@@ -281,12 +281,12 @@ function App() {
   return (
     <div className="bg-black text-white font-sans">
       {/* Notificação de Geolocalização */}
-      <div className="bg-red-600 text-white text-center py-2 px-4 text-sm font-semibold animate-pulse">
+      <div className="bg-black border-b border-red-600 text-red-600 text-center py-2 px-4 text-sm font-semibold animate-pulse">
         <span>🔥 Pessoas de {geoLocation} acabaram de comprar!!</span>
       </div>
 
       {/* Header */}
-      <header className="bg-gray-800 shadow-lg">
+      <header className="bg-black border-b border-red-600/20 shadow-lg shadow-red-600/10">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
@@ -296,7 +296,7 @@ function App() {
               </div>
             </div>
             <div className="hidden md:flex items-center space-x-4">
-              <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm animate-pulse">
+              <span className="bg-red-600 text-white px-3 py-1 rounded-full text-sm animate-pulse">
                 🟢 ONLINE AGORA
               </span>
             </div>
@@ -313,7 +313,7 @@ function App() {
       )}
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-black via-gray-900 to-black py-20">
+      <section className="bg-gradient-to-r from-black via-red-950/20 to-black py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -336,11 +336,11 @@ function App() {
             </div>
             <a 
               href="https://wa.me/5511920040932?text=Vi%20seu%20Site%20agora%20e%20Quero%20fazer%20um%20teste!" 
-              className="inline-block bg-gradient-to-r from-red-600 to-red-700 text-white font-bold py-4 px-8 rounded-lg text-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-red-600/50 animate-bounce"
+              className="inline-block bg-gradient-to-r from-red-600 to-red-800 text-white font-bold py-4 px-8 rounded-lg text-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-red-600/50 animate-bounce border border-red-600"
             >
               🚀 QUERO TESTAR AGORA!
             </a>
-            <p className="text-sm text-gray-400 mt-4">✅ Teste por 7 dias • ✅ Garantia total • ✅ Suporte Todo Dia</p>
+            <p className="text-sm text-red-400 mt-4">✅ Teste por 7 dias • ✅ Garantia total • ✅ Suporte Todo Dia</p>
           </div>
         </div>
       </section>
@@ -350,14 +350,14 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Escolha seu <span className="text-red-600">Plano</span></h2>
-            <p className="text-xl text-gray-300">Sem taxa de instalação • Ativação imediata</p>
+            <p className="text-xl text-red-300">Sem taxa de instalação • Ativação imediata</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {siteData.plans.map((plan) => (
               <div 
                 key={plan.id}
                 className={`relative bg-gray-900 rounded-lg p-8 border-2 ${
-                  plan.popular ? 'border-red-600 scale-105' : 'border-gray-800'
+                  plan.popular ? 'border-red-600 scale-105 shadow-lg shadow-red-600/20' : 'border-red-600/30'
                 } transform transition-all duration-300 hover:scale-105 hover:border-red-600`}
               >
                 {plan.popular && (
@@ -368,18 +368,18 @@ function App() {
                 <div className="text-center">
                   <h3 className="text-2xl font-bold mb-4">{plan.name}</h3>
                   <div className="mb-6">
-                    <span className="text-gray-400 line-through text-lg">{plan.originalPrice}</span>
+                    <span className="text-red-400/60 line-through text-lg">{plan.originalPrice}</span>
                     <div className="text-4xl font-bold text-red-600 mb-2">{plan.price}</div>
                     <span className="bg-red-600 text-white px-3 py-1 rounded-full text-sm">{plan.discount}</span>
                   </div>
                   <ul className="space-y-3 mb-8 text-left">
                     {plan.benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-center text-sm">{benefit}</li>
+                      <li key={index} className="flex items-center text-sm text-red-100">{benefit}</li>
                     ))}
                   </ul>
                   <a 
                     href={plan.link}
-                    className="block w-full bg-gradient-to-r from-red-600 to-red-700 text-white font-bold py-4 px-6 rounded-lg text-center transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-red-600/50"
+                    className="block w-full bg-gradient-to-r from-red-600 to-red-800 text-white font-bold py-4 px-6 rounded-lg text-center transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-red-600/50 border border-red-600"
                   >
                     🚀 QUERO TESTAR AGORA!
                   </a>
@@ -397,35 +397,35 @@ function App() {
             <h2 className="text-4xl font-bold mb-4">Por que escolher a nossa <span className="text-red-600">PLATAFORMA</span>?</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center bg-gray-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
+            <div className="text-center bg-gray-900 border border-red-600/20 p-8 rounded-lg transform hover:scale-105 transition-all duration-300 hover:border-red-600/50">
               <Tv className="w-16 h-16 mx-auto mb-4 text-red-600" />
               <h3 className="text-2xl font-bold mb-4">+3.000 Canais</h3>
-              <p className="text-gray-300">Canais nacionais e internacionais em HD e 4K</p>
+              <p className="text-red-200">Canais nacionais e internacionais em HD e 4K</p>
             </div>
-            <div className="text-center bg-gray-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
+            <div className="text-center bg-gray-900 border border-red-600/20 p-8 rounded-lg transform hover:scale-105 transition-all duration-300 hover:border-red-600/50">
               <Play className="w-16 h-16 mx-auto mb-4 text-red-600" />
               <h3 className="text-2xl font-bold mb-4">+20.000 Filmes e Séries</h3>
-              <p className="text-gray-300">Catálogo sempre atualizado com os últimos lançamentos</p>
+              <p className="text-red-200">Catálogo sempre atualizado com os últimos lançamentos</p>
             </div>
-            <div className="text-center bg-gray-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
+            <div className="text-center bg-gray-900 border border-red-600/20 p-8 rounded-lg transform hover:scale-105 transition-all duration-300 hover:border-red-600/50">
               <div className="text-6xl mb-4">⚽</div>
               <h3 className="text-2xl font-bold mb-4">Esportes ao Vivo</h3>
-              <p className="text-gray-300">Todos os jogos e campeonatos transmitidos ao vivo</p>
+              <p className="text-red-200">Todos os jogos e campeonatos transmitidos ao vivo</p>
             </div>
-            <div className="text-center bg-gray-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
+            <div className="text-center bg-gray-900 border border-red-600/20 p-8 rounded-lg transform hover:scale-105 transition-all duration-300 hover:border-red-600/50">
               <Smartphone className="w-16 h-16 mx-auto mb-4 text-red-600" />
               <h3 className="text-2xl font-bold mb-4">Funciona em Qualquer Dispositivo</h3>
-              <p className="text-gray-300">TV, celular, tablet, notebook - onde você estiver</p>
+              <p className="text-red-200">TV, celular, tablet, notebook - onde você estiver</p>
             </div>
-            <div className="text-center bg-gray-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
+            <div className="text-center bg-gray-900 border border-red-600/20 p-8 rounded-lg transform hover:scale-105 transition-all duration-300 hover:border-red-600/50">
               <Zap className="w-16 h-16 mx-auto mb-4 text-red-600" />
               <h3 className="text-2xl font-bold mb-4">Sem Travamentos</h3>
-              <p className="text-gray-300">Servidores de alta velocidade para streaming perfeito</p>
+              <p className="text-red-200">Servidores de alta velocidade para streaming perfeito</p>
             </div>
-            <div className="text-center bg-gray-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
+            <div className="text-center bg-gray-900 border border-red-600/20 p-8 rounded-lg transform hover:scale-105 transition-all duration-300 hover:border-red-600/50">
               <MessageCircle className="w-16 h-16 mx-auto mb-4 text-red-600" />
               <h3 className="text-2xl font-bold mb-4">Suporte Todos os Dias</h3>
-              <p className="text-gray-300">Atendimento via WhatsApp, 7 dias por semana</p>
+              <p className="text-red-200">Atendimento via WhatsApp, 7 dias por semana</p>
             </div>
           </div>
         </div>
@@ -436,7 +436,7 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">O que nossos <span className="text-red-600">clientes</span> dizem</h2>
-            <p className="text-gray-400">Depoimentos reais de clientes satisfeitos</p>
+            <p className="text-red-400">Depoimentos reais de clientes satisfeitos</p>
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="min-h-[300px] flex items-center">
@@ -474,20 +474,20 @@ function App() {
             <h2 className="text-4xl font-bold mb-4">Suas <span className="text-red-600">Garantias</span></h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center bg-gray-900 p-8 rounded-lg">
+            <div className="text-center bg-gray-900 border border-red-600/20 p-8 rounded-lg hover:border-red-600/50 transition-all duration-300">
               <Shield className="w-16 h-16 mx-auto mb-4 text-red-600" />
               <h3 className="text-2xl font-bold mb-4">7 Dias de Garantia</h3>
-              <p className="text-gray-300">Não gostou? Devolvemos seu dinheiro em até 7 dias</p>
+              <p className="text-red-200">Não gostou? Devolvemos seu dinheiro em até 7 dias</p>
             </div>
-            <div className="text-center bg-gray-900 p-8 rounded-lg">
+            <div className="text-center bg-gray-900 border border-red-600/20 p-8 rounded-lg hover:border-red-600/50 transition-all duration-300">
               <div className="text-6xl mb-4">🔒</div>
               <h3 className="text-2xl font-bold mb-4">Pagamento Seguro</h3>
-              <p className="text-gray-300">Seus dados protegidos com criptografia SSL</p>
+              <p className="text-red-200">Seus dados protegidos com criptografia SSL</p>
             </div>
-            <div className="text-center bg-gray-900 p-8 rounded-lg">
+            <div className="text-center bg-gray-900 border border-red-600/20 p-8 rounded-lg hover:border-red-600/50 transition-all duration-300">
               <MessageCircle className="w-16 h-16 mx-auto mb-4 text-red-600" />
               <h3 className="text-2xl font-bold mb-4">Suporte 24/7</h3>
-              <p className="text-gray-300">Atendimento via WhatsApp 24 horas por dia</p>
+              <p className="text-red-200">Atendimento via WhatsApp 24 horas por dia</p>
             </div>
           </div>
         </div>
@@ -498,16 +498,16 @@ function App() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-8">Métodos de <span className="text-red-600">Pagamento</span></h2>
           <div className="flex flex-wrap justify-center items-center gap-8 mb-12">
-            <div className="bg-white p-4 rounded-lg">
+            <div className="bg-white border-2 border-red-600 p-4 rounded-lg">
               <span className="text-black font-bold">PIX</span>
             </div>
-            <div className="bg-white p-4 rounded-lg">
+            <div className="bg-white border-2 border-red-600 p-4 rounded-lg">
               <span className="text-black font-bold">Crédito</span>
             </div>
           </div>
           <a 
             href="https://wa.me/5511920040932?text=Vi%20seu%20Site%20agora%20e%20Quero%20fazer%20um%20teste!" 
-            className="inline-block bg-gradient-to-r from-red-600 to-red-700 text-white font-bold py-4 px-8 rounded-lg text-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-red-600/50"
+            className="inline-block bg-gradient-to-r from-red-600 to-red-800 text-white font-bold py-4 px-8 rounded-lg text-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-red-600/50 border border-red-600"
           >
             🚀 QUERO TESTAR AGORA!
           </a>
@@ -515,12 +515,12 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 py-12">
+      <footer className="bg-black border-t border-red-600/20 py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <span className="text-2xl font-bold">GLOBAL <span className="text-red-600">ENTRETENIMENTO</span></span>
           </div>
-          <p className="text-gray-400 mb-4">© 2025 Global Entretenimento. Todos os direitos reservados.</p>
+          <p className="text-red-400 mb-4">© 2025 Global Entretenimento. Todos os direitos reservados.</p>
           <p className="text-sm text-gray-500">
             Suporte: WhatsApp (11) 92004-0932 | Atendimento Todos os Dias
           </p>
