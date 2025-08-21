@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Tv, Play, Shield, Smartphone, Zap, MessageCircle, Star, CheckCircle } from 'lucide-react';
 
-  const removeFloating = () => {
+const removeFloating = () => {
   document.querySelectorAll('[style*="position: fixed"][style*="bottom: 1rem"][style*="right: 1rem"][style*="z-index: 2147483647"]').forEach(el => el.remove());
 };
 
@@ -279,7 +279,7 @@ function App() {
   ];
 
   return (
- <div className="bg-black text-white font-sans">
+    <div className="bg-black text-white font-sans">
       {/* Notificação de Geolocalização */}
       <div className="bg-red-600 text-white text-center py-2 px-4 text-sm font-semibold animate-pulse">
         <span>🔥 Pessoas de {geoLocation} acabaram de comprar!!</span>
@@ -397,37 +397,31 @@ function App() {
             <h2 className="text-4xl font-bold mb-4">Por que escolher a nossa <span className="text-red-600">PLATAFORMA</span>?</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center bg-gray-800 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
             <div className="text-center bg-gray-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
               <Tv className="w-16 h-16 mx-auto mb-4 text-red-600" />
               <h3 className="text-2xl font-bold mb-4">+3.000 Canais</h3>
               <p className="text-gray-300">Canais nacionais e internacionais em HD e 4K</p>
             </div>
-            <div className="text-center bg-gray-800 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
             <div className="text-center bg-gray-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
               <Play className="w-16 h-16 mx-auto mb-4 text-red-600" />
               <h3 className="text-2xl font-bold mb-4">+20.000 Filmes e Séries</h3>
               <p className="text-gray-300">Catálogo sempre atualizado com os últimos lançamentos</p>
             </div>
-            <div className="text-center bg-gray-800 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
             <div className="text-center bg-gray-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4">⚽</div>
               <h3 className="text-2xl font-bold mb-4">Esportes ao Vivo</h3>
               <p className="text-gray-300">Todos os jogos e campeonatos transmitidos ao vivo</p>
             </div>
-            <div className="text-center bg-gray-800 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
             <div className="text-center bg-gray-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
               <Smartphone className="w-16 h-16 mx-auto mb-4 text-red-600" />
               <h3 className="text-2xl font-bold mb-4">Funciona em Qualquer Dispositivo</h3>
               <p className="text-gray-300">TV, celular, tablet, notebook - onde você estiver</p>
             </div>
-            <div className="text-center bg-gray-800 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
             <div className="text-center bg-gray-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
               <Zap className="w-16 h-16 mx-auto mb-4 text-red-600" />
               <h3 className="text-2xl font-bold mb-4">Sem Travamentos</h3>
               <p className="text-gray-300">Servidores de alta velocidade para streaming perfeito</p>
             </div>
-            <div className="text-center bg-gray-800 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
             <div className="text-center bg-gray-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
               <MessageCircle className="w-16 h-16 mx-auto mb-4 text-red-600" />
               <h3 className="text-2xl font-bold mb-4">Suporte Todos os Dias</h3>
