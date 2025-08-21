@@ -297,7 +297,7 @@ function App() {
             </div>
             <div className="hidden md:flex items-center space-x-4">
               <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm animate-pulse">
-                🟢 ONLINE AGORA
+                 ONLINE AGORA
               </span>
             </div>
           </div>
