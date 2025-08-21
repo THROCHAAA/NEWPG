@@ -313,7 +313,7 @@ function App() {
       )}
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 py-20">
+      <section className="bg-gradient-to-r from-black via-gray-900 to-black py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -346,7 +346,7 @@ function App() {
       </section>
 
       {/* Planos Section */}
-      <section className="py-20 bg-gray-800">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Escolha seu <span className="text-red-600">Plano</span></h2>
@@ -357,7 +357,7 @@ function App() {
               <div 
                 key={plan.id}
                 className={`relative bg-gray-900 rounded-lg p-8 border-2 ${
-                  plan.popular ? 'border-red-600 scale-105' : 'border-gray-700'
+                  plan.popular ? 'border-red-600 scale-105' : 'border-gray-800'
                 } transform transition-all duration-300 hover:scale-105 hover:border-red-600`}
               >
                 {plan.popular && (
@@ -391,38 +391,44 @@ function App() {
       </section>
 
       {/* Benefícios Section */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Por que escolher a nossa <span className="text-red-600">PLATAFORMA</span>?</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center bg-gray-800 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
+            <div className="text-center bg-gray-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
               <Tv className="w-16 h-16 mx-auto mb-4 text-red-600" />
               <h3 className="text-2xl font-bold mb-4">+3.000 Canais</h3>
               <p className="text-gray-300">Canais nacionais e internacionais em HD e 4K</p>
             </div>
             <div className="text-center bg-gray-800 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
+            <div className="text-center bg-gray-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
               <Play className="w-16 h-16 mx-auto mb-4 text-red-600" />
               <h3 className="text-2xl font-bold mb-4">+20.000 Filmes e Séries</h3>
               <p className="text-gray-300">Catálogo sempre atualizado com os últimos lançamentos</p>
             </div>
             <div className="text-center bg-gray-800 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
+            <div className="text-center bg-gray-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4">⚽</div>
               <h3 className="text-2xl font-bold mb-4">Esportes ao Vivo</h3>
               <p className="text-gray-300">Todos os jogos e campeonatos transmitidos ao vivo</p>
             </div>
             <div className="text-center bg-gray-800 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
+            <div className="text-center bg-gray-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
               <Smartphone className="w-16 h-16 mx-auto mb-4 text-red-600" />
               <h3 className="text-2xl font-bold mb-4">Funciona em Qualquer Dispositivo</h3>
               <p className="text-gray-300">TV, celular, tablet, notebook - onde você estiver</p>
             </div>
             <div className="text-center bg-gray-800 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
+            <div className="text-center bg-gray-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
               <Zap className="w-16 h-16 mx-auto mb-4 text-red-600" />
               <h3 className="text-2xl font-bold mb-4">Sem Travamentos</h3>
               <p className="text-gray-300">Servidores de alta velocidade para streaming perfeito</p>
             </div>
             <div className="text-center bg-gray-800 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
+            <div className="text-center bg-gray-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
               <MessageCircle className="w-16 h-16 mx-auto mb-4 text-red-600" />
               <h3 className="text-2xl font-bold mb-4">Suporte Todos os Dias</h3>
               <p className="text-gray-300">Atendimento via WhatsApp, 7 dias por semana</p>
@@ -432,7 +438,7 @@ function App() {
       </section>
 
       {/* Depoimentos Section */}
-      <section className="py-20 bg-gray-800">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">O que nossos <span className="text-red-600">clientes</span> dizem</h2>
@@ -447,7 +453,7 @@ function App() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Perguntas <span className="text-red-600">Frequentes</span></h2>
@@ -468,7 +474,7 @@ function App() {
       </section>
 
       {/* Garantias Section */}
-      <section className="py-20 bg-gray-800">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Suas <span className="text-red-600">Garantias</span></h2>
@@ -494,7 +500,7 @@ function App() {
       </section>
 
       {/* Métodos de Pagamento */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-8">Métodos de <span className="text-red-600">Pagamento</span></h2>
           <div className="flex flex-wrap justify-center items-center gap-8 mb-12">
