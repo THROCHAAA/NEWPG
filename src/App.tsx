@@ -487,7 +487,7 @@ function App() {
             <div className="text-center bg-gray-900 p-8 rounded-lg">
               <MessageCircle className="w-16 h-16 mx-auto mb-4 text-red-600" />
               <h3 className="text-2xl font-bold mb-4">Suporte 24/7</h3>
-              <p className="text-gray-300">Atendimento via WhatsApp 24 horas por dia</p>
+              <p className="text-gray-300">Atendimento via WhatsApp por todo dia</p>
             </div>
           </div>
         </div>
