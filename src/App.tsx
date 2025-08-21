@@ -279,7 +279,7 @@ function App() {
   ];
 
   return (
-<div className="bg-black text-white font-sans">
+ <div className="bg-black text-white font-sans">
       {/* Notificação de Geolocalização */}
       <div className="bg-red-600 text-white text-center py-2 px-4 text-sm font-semibold animate-pulse">
         <span>🔥 Pessoas de {geoLocation} acabaram de comprar!!</span>
