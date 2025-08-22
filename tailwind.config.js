@@ -6,7 +6,7 @@ export default {
       colors: {
         primary: '#dc2626',
         secondary: '#991b1b',
-        'gray-850': '#1f2937',
+        'zinc-850': '#18181b',
       },
       animation: {
         'slide-in': 'slide-in 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
