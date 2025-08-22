@@ -400,7 +400,7 @@ function App() {
             <div className="text-center bg-zinc-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
               <div className="benefit-icon-container mb-4">
                 <img 
-                  src="https://img.cdndsgni.com/preview/11005437.jpg" 
+                  src="/images/tv-icon.png" 
                   alt="Ícone de TV representando canais de televisão"
                   className="benefit-icon mx-auto"
                 />
