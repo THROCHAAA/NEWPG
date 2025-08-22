@@ -89,3 +89,119 @@
     opacity: 1;
   }
 }
+
+/* Estilos responsivos para ícones de benefícios */
+.benefit-icon-container {
+  /* Container flexível para centralização */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Altura fixa para manter consistência visual */
+  height: 4rem; /* 64px equivalente ao w-16 h-16 original */
+  width: 100%;
+}
+
+.benefit-icon {
+  /* Responsividade base - imagem se adapta ao container */
+  max-width: 100%;
+  height: auto;
+  
+  /* Tamanho padrão para desktop */
+  width: 4rem; /* 64px - equivalente ao w-16 original */
+  height: 4rem; /* 64px - equivalente ao h-16 original */
+  
+  /* Manter proporção da imagem */
+  object-fit: contain;
+  
+  /* Transição suave para hover effects */
+  transition: transform 0.3s ease, filter 0.3s ease;
+  
+  /* Filtro para simular a cor vermelha dos ícones originais */
+  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+/* Hover effect para os ícones */
+.benefit-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(120%) contrast(110%);
+}
+
+/* Breakpoints responsivos */
+
+/* Tablets (768px e acima) */
+@media (min-width: 768px) {
+  .benefit-icon {
+    width: 4rem; /* Mantém 64px em tablets */
+    height: 4rem;
+  }
+  
+  .benefit-icon-container {
+    height: 4rem;
+  }
+}
+
+/* Mobile grande (640px a 767px) */
+@media (max-width: 767px) and (min-width: 640px) {
+  .benefit-icon {
+    width: 3.5rem; /* 56px - ligeiramente menor */
+    height: 3.5rem;
+  }
+  
+  .benefit-icon-container {
+    height: 3.5rem;
+  }
+}
+
+/* Mobile pequeno (até 639px) */
+@media (max-width: 639px) {
+  .benefit-icon {
+    width: 3rem; /* 48px - menor para telas pequenas */
+    height: 3rem;
+  }
+  
+  .benefit-icon-container {
+    height: 3rem;
+  }
+}
+
+/* Mobile muito pequeno (até 480px) */
+@media (max-width: 480px) {
+  .benefit-icon {
+    width: 2.5rem; /* 40px - ainda menor para telas muito pequenas */
+    height: 2.5rem;
+  }
+  
+  .benefit-icon-container {
+    height: 2.5rem;
+  }
+}
+
+/* Orientação paisagem em dispositivos móveis */
+@media (max-height: 500px) and (orientation: landscape) {
+  .benefit-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .benefit-icon-container {
+    height: 2.5rem;
+  }
+}
+
+/* Suporte para telas de alta densidade (Retina) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .benefit-icon {
+    /* Manter nitidez em telas de alta densidade */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Fallback para navegadores que não suportam object-fit */
+@supports not (object-fit: contain) {
+  .benefit-icon {
+    /* Fallback usando background-image para navegadores antigos */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }

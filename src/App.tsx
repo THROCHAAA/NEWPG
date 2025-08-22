@@ -398,32 +398,68 @@ function App() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center bg-zinc-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
-              <Tv className="w-16 h-16 mx-auto mb-4 text-red-600" />
+              <div className="benefit-icon-container mb-4">
+                <img 
+                  src="/images/tv-icon.png" 
+                  alt="Ícone de TV representando canais de televisão"
+                  className="benefit-icon mx-auto"
+                />
+              </div>
               <h3 className="text-2xl font-bold mb-4">+3.000 Canais</h3>
               <p className="text-slate-300">Canais nacionais e internacionais em HD e 4K</p>
             </div>
             <div className="text-center bg-zinc-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
-              <Play className="w-16 h-16 mx-auto mb-4 text-red-600" />
+              <div className="benefit-icon-container mb-4">
+                <img 
+                  src="/images/play-icon.png" 
+                  alt="Ícone de play representando filmes e séries"
+                  className="benefit-icon mx-auto"
+                />
+              </div>
               <h3 className="text-2xl font-bold mb-4">+20.000 Filmes e Séries</h3>
               <p className="text-slate-300">Catálogo sempre atualizado com os últimos lançamentos</p>
             </div>
             <div className="text-center bg-zinc-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
-              <div className="text-6xl mb-4">⚽</div>
+              <div className="benefit-icon-container mb-4">
+                <img 
+                  src="/images/sports-icon.png" 
+                  alt="Ícone de esportes representando transmissões esportivas"
+                  className="benefit-icon mx-auto"
+                />
+              </div>
               <h3 className="text-2xl font-bold mb-4">Esportes ao Vivo</h3>
               <p className="text-slate-300">Todos os jogos e campeonatos transmitidos ao vivo</p>
             </div>
             <div className="text-center bg-zinc-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
-              <Smartphone className="w-16 h-16 mx-auto mb-4 text-red-600" />
+              <div className="benefit-icon-container mb-4">
+                <img 
+                  src="/images/devices-icon.png" 
+                  alt="Ícone de dispositivos móveis representando compatibilidade"
+                  className="benefit-icon mx-auto"
+                />
+              </div>
               <h3 className="text-2xl font-bold mb-4">Funciona em Qualquer Dispositivo</h3>
               <p className="text-slate-300">TV, celular, tablet, notebook - onde você estiver</p>
             </div>
             <div className="text-center bg-zinc-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
-              <Zap className="w-16 h-16 mx-auto mb-4 text-red-600" />
+              <div className="benefit-icon-container mb-4">
+                <img 
+                  src="/images/speed-icon.png" 
+                  alt="Ícone de velocidade representando streaming sem travamentos"
+                  className="benefit-icon mx-auto"
+                />
+              </div>
               <h3 className="text-2xl font-bold mb-4">Sem Travamentos</h3>
               <p className="text-slate-300">Servidores de alta velocidade para streaming perfeito</p>
             </div>
             <div className="text-center bg-zinc-900 p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
-              <MessageCircle className="w-16 h-16 mx-auto mb-4 text-red-600" />
+              <div className="benefit-icon-container mb-4">
+                <img 
+                  src="/images/support-icon.png" 
+                  alt="Ícone de suporte representando atendimento ao cliente"
+                  className="benefit-icon mx-auto"
+                />
+              </div>
               <h3 className="text-2xl font-bold mb-4">Suporte Todos os Dias</h3>
               <p className="text-slate-300">Atendimento via WhatsApp, 7 dias por semana</p>
             </div>
